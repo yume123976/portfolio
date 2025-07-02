@@ -1,0 +1,60 @@
+/* 全体のフォントと余白 */
+body{
+    font-family: "Helvetica","Arial",sans-serif;
+    background-color: #fdede4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* ヘッダーとナビ */
+header{
+    background-color: #f3a68c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* セクションの見出し */
+section h2{
+    color: #2b5aa3;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+/* アーティスト画像 */
+figure{
+    text-align: center;
+    margin: 20px 0;
+}
+
+figcaption{
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* フッター */
+footer{
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-size: 0.9em;
+}
+
+/* リンクにマウスを当てた時 */
+a:hover{
+    text-decoration: underline;
+    color: #3366cc;
+}
