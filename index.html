@@ -6,9 +6,52 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>My Portfolio</h1>
-        <ul>
-            <li><a href="profile.html">自己紹介サイト</a></li>
-        </ul>
+        <header>
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>美容医療クリニックの受付を経験後、本社事務を経てWebデザインに関する仕事を希望中。<br>
+            現在、Webデザイン・コーディングを独学で勉強しています。</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>GitHub</li>
+            </ul>
+        </section>
+
+        <section id="works">
+            <h2>My Works</h2>
+            <div class="gallery">
+                <div class="work-item">
+                    <a href="profile.html">
+                        <img src="images/self-intro.png" art="自己紹介ページ">
+                    </a>
+                    <p>自己紹介ページ</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>メール：ehpnegne1130@gmail.com</p>
+            <p><a href="https://github.com/yume123976/portfolio" target="_blank">GitHubはこちら</a></p>
+        </section>
+
+        <footer>
+            <p>&copy;2025 Yume</p>
+        </footer>
     </body>
 </html>
