@@ -1,0 +1,71 @@
+/* 全体のフォントと余白 */
+body{
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    /* Helvetica Neue(Macに多いゴシック体)があればそれを使ってね、なければArial(Windowsに多いゴシック体)を使ってね、それもなければsans-serif(普通のゴシック体)を使ってね */
+    line-height: 1.6;
+    color: #333;
+    background: #fefefe;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: #7b5d42;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a{
+    color: white;
+    margin: 0 15px; /* 上下は0、左右は15pxの余白をあける */
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+.hero{
+    background: url(../images/cafe-store.jpg) center/cover no-repeat;
+    /* このエリアの背景にimages,cafe-store,jpgを中央配置(center)して、要素のサイズに合わせて大きさを調整して全体を埋めて(cover)、かつ繰り返しなしで1枚だけ表示する(no-repeat) */
+    color: #6f5436;
+    text-align: center;
+    padding: 100px 20px; /* 上下に大きく(100px)余白を取り、左右には小さく(20px)余白を取る */
+}
+
+.hero h2{
+    padding-top: 10px; /* 上だけ余白を小さくする */
+    margin-top: -10px; /* 上に引っ張り上げる */
+    padding-bottom: 0; /* 下の余白はなし */
+}
+
+.hero p{
+    line-height: 0.1; /* 行間を詰める */
+    font-weight: bold; /* 文字を太字にする（数字でもOK！400→通常、700→太字、900→超太字） */
+}
+
+section{
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-item{
+    display: inline-block; /* 横に並べたいけど、ちゃんと幅や高さをつけたい時に使う */
+    margin: 20px;
+}
+
+.menu-item img{
+    width: 200px;
+    border-radius: 50%; /* 要素の角を50%分丸める（数字を大きくすればするほど丸みが出る、50%は円形になる） */
+}
+
+#access img{
+    display: block; /* 縦に並ぶ（幅いっぱい使う）、幅・高さを自由に設定できる */
+    margin: 20px 160px 10px; /* 上下に20px、左に160px、右に10px余白をつける */
+    width: 80%; /* 画面幅の80% */
+    max-width: 600px; /* それ以上は600pxまで */
+    height: auto; /* 縦横比を保つ */
+}
+
+footer{
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+}
