@@ -23,7 +23,7 @@ header nav a{
 }
 
 .hero{
-    background: url(../images/cafe-store.jpg) center/cover no-repeat;
+    background: url(images/cafe-store.jpg) center/cover no-repeat;
     /* このエリアの背景にimages,cafe-store,jpgを中央配置(center)して、要素のサイズに合わせて大きさを調整して全体を埋めて(cover)、かつ繰り返しなしで1枚だけ表示する(no-repeat) */
     color: #6f5436;
     text-align: center;
