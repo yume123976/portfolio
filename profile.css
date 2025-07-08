@@ -1,3 +1,6 @@
+/* Gogle Fontsを使う場合 */
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
+
 /* 全体のフォントと余白 */
 body{
     font-family: "Helvetica","Arial",sans-serif;
@@ -16,6 +19,19 @@ header{
     text-align: center;
 }
 
+header.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header h1{
+    font-size: 1.8rem;
+}
+
 nav ul{
     list-style: none;
     padding: 0;
@@ -25,23 +41,78 @@ nav ul{
     margin-top: 10px;
 }
 
-/* セクションの見出し */
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* リンクにマウスを当てた時 */
+nav a:hover{
+    text-decoration: underline;
+    color: #7d7d7d;
+}
+
+/* セクション */
+section{
+    max-width: 1200px;
+    margin: 60px 0;
+    padding: 0 20px;
+    text-align: left;
+}
+
 section h2{
-    color: #2b5aa3;
+    font-size: 2rem;
+    color: #7d7d7d;
     border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
     margin-top: 40px;
 }
 
-/* アーティスト画像 */
+/* 趣味・特技 */
+#hobby ul{
+    padding: 0 30px;
+}
+
+/* アーティスト */
 figure{
     text-align: center;
     margin: 20px 0;
 }
 
+img{
+    border-radius: 15px;
+}
+
 figcaption{
-    font-style: italic;
     margin-top: 5px;
+}
+
+#artist p{
+    margin: 10px 20px 0;
+    padding: 5px 20px 0;
+}
+
+/* コンタクト */
+#contact .links{
+    display: flex;
+    justify-content: center; /* 横中央揃え */
+    gap: 30px; /* リンク同士（#contact a）の間隔 */
+}
+
+#contact a{
+    color: #7d7d7d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: 2px solid #7d7d7d;
+    border-radius: 30px;
+}
+
+/* リンクにマウスを当てた時 */
+#contact a:hover{
+    text-decoration: underline;
+    color: #7d7d7d;
 }
 
 /* フッター */
@@ -51,10 +122,4 @@ footer{
     padding: 20px;
     background-color: #f0f0f0;
     font-size: 0.9em;
-}
-
-/* リンクにマウスを当てた時 */
-a:hover{
-    text-decoration: underline;
-    color: #3366cc;
 }
