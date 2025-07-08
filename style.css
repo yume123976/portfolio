@@ -1,39 +1,156 @@
+/* Gogle Fontsを使う場合 */
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
+
 /* 全体のフォントと余白 */
 body{
-    font-family: "Helvetica Neue",Arial,sans-serif;
-    line-height: 1.6;
+    font-family: "Noto Sans",sans-serif;
+    line-height: 1.8;
     color: #333;
     background: #f9f9f9;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-.container{
-    max-width: 960px;
+/* ヘッダー */
+header{
+    background: #007ACC;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header.container{
+    max-width: 1200px;
     margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    display: flex; /* 横並びにする */
+    align-items: center;
+    justify-content: space-between; /* 両端に寄せて間の余白を均等にする */
 }
 
-h1,h2,h3{
-    margin-top: 15px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
+header h1{
+    font-size: 1.8rem;
+    /* 1rem=<html>で設定されたフォントサイズ（デフォルト16px）→1.8rem=1.8×16px=約28.8px */
 }
 
-img{
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 100%;
-    height: auto;
+nav ul{
+    list-style: none; /* ・/1./a.など先頭のリストマーカーを消す */
+    display: flex;
+    gap: 20px; /* 子要素同士の隙間を20px空ける */
+    margin: 0; /* 要素の外側の余白を0にリセットする */
+    padding: 0; /* リストの左インデントを消す */
 }
 
-a{
-    color: #007acc;
-    text-decoration: none;
+nav a{
+    color: #fff;
+    text-decoration: none; /* リンクの下線を消す */
+    font-weight: bold; /*　文字を太字にする */
 }
-a:hover{
-    color: #005fa3;
+
+nav a:hover{
     text-decoration: underline;
+    /* マウス乗った時（:hover）だけ下線がつく（underline） */
+}
+
+/* セクション */
+section{
+    max-width: 1000px; /* 最大幅を1000pxにする */
+    margin: 60px auto; /* 上下に60pxの余白、左右のマージンを自動で設定して中央揃え */
+    padding: 0 20px;
+    text-align: center;
+}
+
+section h2{
+    font-size: 2rem; /* 2×16px=32px */
+    margin-bottom: 20px; /* section h2の要素とその下の要素の間に20px余白ができる */
+    color: #007Acc;
+}
+
+/* スキルリスト */
+#skills ul{
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 全体を中央寄せ */
+    gap: 30px; /* 子要素同士の隙間を30px空ける */
+    padding: 0;
+}
+
+#skills li{
+    background: #fff;
+    border-radius: 30px; /* 角を丸くする */
+    padding: 10px 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* ボックスに影をつける（横方向→0 ずれない、縦方向→4px 下に4px落ちる、ぼかし→15px 15pxぶんフワッと広がる、色→rgba(0,0,0,0.1) 黒で1%の透明度） */
+}
+
+/* ギャラリー(作品一覧) */
+.gallery{
+    display: flex;
+    flex-wrap: wrap; /* はみ出したら改行 */
+    gap: 30px; /* アイテム同士に30pxの隙間 */
+    justify-content: center; /* 全体中央寄せ */
+}
+
+.work-item{
+    background: #fff;
+    border-radius: 20px; /* 角を丸くする */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+     /* ボックスに影をつける（横方向→0 ずれない、縦方向→8px 下に8px落ちる、ぼかし→20px 20pxぶんフワッと広がる、色→rgba(0,0,0,0.08) 黒で8%の透明度） */
+    padding: 30px;
+    padding: 30px;
+    width: 250px;
+    transition: transform 0.3s,box-shadow 0.3s;
+    /* アニメーションを滑らかにする設定（0.3秒かけて影の変化(box-shadow)動く(transform)） */
+}
+
+.work-item:hover{
+    /* マウスを乗せた時（:hover） */
+    transform: translateY(-8px); /* Y軸（縦方向）に-8px（上方向）移動 */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.work-item h3{
+    font-size: 1.3rem; /* 1.3×16px=20.8px */
+    margin-bottom: 15px; /* work-item h3の要素とその下の要素の間に15px余白ができる */
+    color: #007ACC;
+}
+
+.work-item a{
+    display: inline-block; /* 横に並べたいけど、ちゃんと幅や高さをつけたい時に使う */
+    color: #007ACC;
+    text-decoration: none;
+    font-weight: bold; /*文字を太字にする */
+    margin-top: 10px; /* 要素の上に10pxの余白をつける */
+    padding: 8px 16px;
+    border: 2px solid #007ACC; /* 枠線をつける（2px→線の太さ、solid→実線、#007ACC→青色） */
+    border-radius: 30px;
+    transition: background 0.3s,color 0.3s;
+}
+
+.work-item a:hover{
+    background: #007ACC;
+    color: #fff;
+}
+
+/* Contactセクション */
+#contact p{
+    margin: 10px 0;
+}
+
+#contact a{
+    color: #007ACC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover{
+    text-decoration: underline;
+}
+
+/* フッター */
+footer{
+    text-align: center;
+    background: #eee;
+    padding: 20px;
+    margin-top: 60px; /* 要素の上に60pxの余白をつける */
+    color: #555;
 }
