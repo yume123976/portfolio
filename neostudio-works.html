@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- width=device-width→viewportの幅を「デバイスの画面幅」に合わせる -->
+    <!-- initial-scale=1.0→ページを開いた時のズーム倍率を「1倍」に設定する -->
+    <title>WORKS | NEO STUDIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- スライダー用のデザインが適用される -->
+    <link rel="stylesheet" href="neostudio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="neostudio.html">NEO STUDIO</a></li>
+                <li><a href="neostudio.html#about">ABOUT</a></li>
+                <li><a href="neostudio-service.html">SERVICE</a></li>
+                <li><a href="neostudio-works.html">WORKS</a></li>
+                <li><a href="neostudio.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="works">
+        <h2>WORKS</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- 制作実績の画像↓ -->
+                <div class="swiper-slide"><img src="../images/neostudio-work1.jpg" art="制作実績1"></div>
+                <div class="swiper-slide"><img src="../images/neostudio-work2.jpg" art="制作実績2"></div>
+                <div class="swiper-slide"><img src="../images/neostudio-work3.jpg" art="制作実績3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Swiperがこの構造を認識してスライドさせる -->
+    </section>
+
+    <footer>
+        <p>&copy;2025 NEO STUDIO</p>
+    </footer>
+
+    <!-- JavaScriptのタグ↓ -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper=new Swiper(".mySwiper",{
+            loop:true,
+            pagination:{
+                el:".swiper-pagination",
+                clickable:true
+            },
+        });
+    </script>
+</body>
+</html>
